@@ -67,8 +67,7 @@ app.get('/Survey_Form', async (req, res) => {
   let date = new Date();
   //console.log(date);
   let today = date.toDateString();
-  // const api_url = 'https://api.openweathermap.org/data/2.5/weather?appid=' + process.env.APPID  + '&q=Toronto&units=metric';
-  const api_url = 'https://api.openweathermap.org/data/2.5/weather?appid=3ded28e36b94df82fcae11fa34b71aa0&q=Toronto&units=metric';
+  const api_url = 'https://api.openweathermap.org/data/2.5/weather?appid=' + process.env.APPID  + '&q=Toronto&units=metric';
   const response = await fetch(api_url);
   const json1 = await response.json();
   let temperature = math.round(json1.main.temp);
